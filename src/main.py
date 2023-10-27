@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 import duckdb
 
-con: duckdb.DuckDBPyConnection = duckdb.connect("my_db.db")
 
-
-def load_extension(con: duckdb.DuckDBPyConnection):
+def load_extension(conn: duckdb.DuckDBPyConnection):
     """Install and load extensions"""
-    con.install_extension("spatial")
-    con.load_extension("spatial")
+    conn.install_extension("spatial")
+    conn.load_extension("spatial")
 
 
-def load_data(con: duckdb.DuckDBPyConnection, replace: bool = False):
+def load_data(conn: duckdb.DuckDBPyConnection, replace: bool = False):
     """
     Load data from compressed csv | geojson format.
 
@@ -33,16 +31,18 @@ def load_data(con: duckdb.DuckDBPyConnection, replace: bool = False):
 
     for table_name, file_name in load_tables:
         file_path = f"data/{file_name}"
-        con.sql(f"{create_command} {table_name} AS SELECT  * FROM read_csv_auto('{file_path}')")
+        conn.sql(f"{create_command} {table_name} AS SELECT  * FROM read_csv_auto('{file_path}')")
 
 
 
 if __name__ == '__main__':
 
-    # Load extensions
-    load_extension(con)
-    load_data(con)
+    conn: duckdb.DuckDBPyConnection = duckdb.connect("my_db.db")
 
-    con.sql("SHOW ALL TABLES;").show()
-    df = con.sql('SELECT * FROM traffic_signals').df()  # Converts to a pandas df
+    # Load extensions
+    load_extension(conn)
+    load_data(conn)
+
+    conn.sql("SHOW ALL TABLES;").show()
+    df = conn.sql('SELECT * FROM traffic_signals').df()  # Converts to a pandas df
     print(df.head())
