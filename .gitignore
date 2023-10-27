@@ -1,0 +1,18 @@
+# Ignore default stuff
+.idea/
+.DS_Store
+
+# Ignore secrets
+*.env
+
+# Ignore terraform local stuff
+*.terraform*
+*.tfstate
+*.tfstate.*
+
+# Ignore cache
+.pytest_cache
+
+# ignore any duckdb files
+*.duckdb
+*.db

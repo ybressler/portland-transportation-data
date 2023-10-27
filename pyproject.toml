@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "portland-open-data"
+version = "0.1.0"
+description = "Accessing open data from the city of Portland"
+authors = ["ybressler"]
+readme = "README.md"
+packages = [{include = "../"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+pytest = "^7.4.2"
+duckdb = "^0.9.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# Allow lines to be as long as 120 characters.
+line-length = 120
