@@ -19,3 +19,7 @@
 
 # ignore cache
 .ruff_cache/
+
+# ignore notebooks
+notebooks/
+*.ipynb
