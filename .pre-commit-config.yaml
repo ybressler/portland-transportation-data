@@ -6,8 +6,9 @@ repos:
       - id: check-added-large-files
         exclude: |
           (?x)(
-            ^docs/
-            logs/
+            ^docs/|
+            logs/|
+            data/
           )
       - id: check-case-conflict
       - id: check-docstring-first

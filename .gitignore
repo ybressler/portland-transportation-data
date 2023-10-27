@@ -16,6 +16,3 @@
 # ignore any duckdb files
 *.duckdb
 *.db
-
-# ignore data
-data/
