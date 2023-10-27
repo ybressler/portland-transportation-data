@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "portland-open-data"
+name = "portland-transportation-data"
 version = "0.1.0"
 description = "Accessing open data from the city of Portland"
 authors = ["ybressler"]
