@@ -16,3 +16,6 @@
 # ignore any duckdb files
 *.duckdb
 *.db
+
+# ignore cache
+.ruff_cache/
