@@ -1507,25 +1507,25 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "polars"
-version = "0.19.11"
+version = "0.19.14"
 description = "Blazingly fast DataFrame library"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "polars-0.19.11-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:de8158e5f09346ec4622057b7afa7e5339eed61c3c3e874b469c9cb27339df51"},
-    {file = "polars-0.19.11-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:c76c2107260a1ca8a57f02d77ea12dc4db2090d7404b814570474db0392ecf6b"},
-    {file = "polars-0.19.11-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a5c6cf2aa2d301230a80277f8711646453b89eadd6058baf30b7104f420daad2"},
-    {file = "polars-0.19.11-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2ac2890c96736dee83335b1f0b403233aba18b86760505e81eb9f96112afc55d"},
-    {file = "polars-0.19.11-cp38-abi3-win_amd64.whl", hash = "sha256:95be83cb0bbd2d608849e24a973ea3135bd25ae6ce7168e31ad25a02e7773122"},
-    {file = "polars-0.19.11.tar.gz", hash = "sha256:156eab31d9f9bac218bbd391559c667848372a5c584472784695e4fac087fd5b"},
+    {file = "polars-0.19.14-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:a1e84b3d1e77bbf083183ad3c1d7d1d090705cd379c965ee9e585a90d27d7ca3"},
+    {file = "polars-0.19.14-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:65812e80d49f02b368fe21b9a3a3d52a5ca0774131eb2df3e3cc647fdeab42af"},
+    {file = "polars-0.19.14-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d099aeaf684291c9f7ef64ef35749eac00f815d877dfdef1e331a431b1ec06f4"},
+    {file = "polars-0.19.14-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:443625bf10b149aef18e8b9b0fbc32a8463e065fc827329c2f0aec4bdc24f525"},
+    {file = "polars-0.19.14-cp38-abi3-win_amd64.whl", hash = "sha256:6e39f47b73adec935ba301fefbaf18865fb07170f7d81b943dfc081af4feddce"},
+    {file = "polars-0.19.14.tar.gz", hash = "sha256:5af498565324bdd623c47ebd10ad8681be0a9ad4d24e719673064ba4e9c111a3"},
 ]
 
 [package.extras]
 adbc = ["adbc_driver_sqlite"]
 all = ["polars[adbc,cloudpickle,connectorx,deltalake,fsspec,gevent,matplotlib,numpy,pandas,pyarrow,pydantic,pyiceberg,sqlalchemy,timezone,xlsx2csv,xlsxwriter]"]
 cloudpickle = ["cloudpickle"]
-connectorx = ["connectorx"]
-deltalake = ["deltalake (>=0.10.0)"]
+connectorx = ["connectorx (>=0.3.2)"]
+deltalake = ["deltalake (>=0.13.0)"]
 fsspec = ["fsspec"]
 gevent = ["gevent"]
 matplotlib = ["matplotlib"]
@@ -2553,4 +2553,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "0fc81021155302a384c2110f4afb7c26e788084161eab8fd7e22b07b0382fa59"
+content-hash = "9dc9069d973d35c8f0e5a0362f4e1ff4ba0f07bef32f6adde57a65cb4dba4615"
